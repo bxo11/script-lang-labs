@@ -21,7 +21,7 @@ actions:
 
 entities:
 - day
-- order_item
+- order
 
 intents:
 - greet
@@ -42,14 +42,14 @@ intents:
 slots:
   day:
     type: text
-  order_item:
+  order:
     type: text
   address:
     type: text 
   comment:
     type: text 
 
-templates:
+responses:
   utter_ask_for_deliver_option:
   - text: Do you want delivery to your address or pick up option?
   utter_ask_for_address:
@@ -76,3 +76,6 @@ templates:
   utter_iamabot:
   - text: I am a bot, powered by Rasa.
 
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: false

@@ -12,7 +12,7 @@ from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 import json
-from rasa_core.events import SlotSet
+from rasa_sdk.events import SlotSet
 from rasa_sdk.forms import FormAction
 from typing import Any, Text, Dict, List, Union
 
@@ -74,7 +74,7 @@ class ActionConfirmOrder(Action):
         f = open('menu.json')
         data = json.load(f)
         f.close()
-        order = tracker.get_slot("order_item")
+        order = tracker.get_slot("order")
         comment = tracker.get_slot("comment")
         preparation_time = 0
 
@@ -98,7 +98,7 @@ class ActionConfirmOrderWithAddress(Action):
         f = open('menu.json')
         data = json.load(f)
         f.close()
-        order = tracker.get_slot("order_item")
+        order = tracker.get_slot("order")
         comment = tracker.get_slot("comment")
         preparation_time = 0
        
@@ -122,7 +122,6 @@ class ActionSaveDetails(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         comment = tracker.latest_message['text']
-        dispatcher.utter_message(f'Your comment is: {comment}')
         return [SlotSet("comment", comment)]
     
 class ActionSaveAddress(Action):
@@ -134,7 +133,6 @@ class ActionSaveAddress(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         address = tracker.latest_message['text']
-        dispatcher.utter_message(f'Your address is: {address}')
         return [SlotSet("address", address)]
     
 # class emailForm(FormAction):

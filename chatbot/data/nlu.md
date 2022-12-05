@@ -90,17 +90,17 @@
 
 
 ## intent:place_order
-- i want order a [Lasagne](order_item)
-- i would like a [Lasagne](order_item)
-- i want to order a [Lasagne](order_item)
-- give me a [Lasagne](order_item)
-- i want to buy a [Lasagne](order_item)
+- i want order a [Lasagne](order)
+- i would like a [Lasagne](order)
+- i want to order a [Lasagne](order)
+- give me a [Lasagne](order)
+- i want to buy a [Lasagne](order)
 
 
 ## intent:restaurant_work_hours
 - are you working on [Monday](day)?
 - when do you open on [Monday](day)?
-- when do you closeon [Monday](day)?
+- when do you close on [Monday](day)?
 - what time do you open on [Monday](day)?
 - what time do you close on [Monday](day)?
 - what are your business hours on [Monday](day)?
@@ -109,9 +109,9 @@
 - is the restaurant open on [Monday](day)?
 
 
-## lookup:order_item
+## lookup:order
 - Lasagne
-- Pizza 
+- Pizza
 - Hot-dog
 - Burger
 - Spaghetti Carbonara
