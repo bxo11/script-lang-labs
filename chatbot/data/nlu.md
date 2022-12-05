@@ -82,7 +82,6 @@
 
 
 ## intent:provide_details
-- my comment is
 - i need extra
 - i want extra
 - give me more
@@ -91,12 +90,10 @@
 
 
 ## intent:place_order
-- i want [Lasagne](order_item)
-- i want order [Lasagne](order_item)
-- i'd like a [Lasagne](order_item)
+- i want order a [Lasagne](order_item)
+- i would like a [Lasagne](order_item)
 - i want to order a [Lasagne](order_item)
 - give me a [Lasagne](order_item)
-- i want a [Lasagne](order_item)
 - i want to buy a [Lasagne](order_item)
 
 

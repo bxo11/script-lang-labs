@@ -123,7 +123,7 @@ class ActionSaveDetails(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         comment = tracker.latest_message['text']
         dispatcher.utter_message(f'Your comment is: {comment}')
-        return [SlotSet("comment", "comment")]
+        return [SlotSet("comment", comment)]
     
 class ActionSaveAddress(Action):
     def name(self):
@@ -135,7 +135,7 @@ class ActionSaveAddress(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         address = tracker.latest_message['text']
         dispatcher.utter_message(f'Your address is: {address}')
-        return [SlotSet("address", "address")]
+        return [SlotSet("address", address)]
     
 # class emailForm(FormAction):
 #     """Example of a custom form action"""
