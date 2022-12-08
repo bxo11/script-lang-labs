@@ -1,4 +1,6 @@
 from discord.ext import commands
+import requests 
+import json
 
 TOKEN = 'MTA0NzYwNTI4ODkzNDU3NjE3OA.GqcaKr.muTocVAJzqngaH3TNc3l75TiIUgBCGfGfbpqJI'
 
@@ -19,7 +21,15 @@ class ChatBot(commands.Bot):
     async def on_message(self, message):
         if message.author == self.user:
             return
-        await message.channel.send('halo')
+        data = {
+          "sender": message.author.name,
+          "message": message.content
+        }
+        
+        r = requests.post('http://localhost:5005/webhooks/rest/webhook', json=data)
+        data = r.json()
+
+        await message.channel.send(data[0]['text'])
 
 
 if __name__ == '__main__':

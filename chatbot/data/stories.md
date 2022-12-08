@@ -68,7 +68,6 @@
   - utter_ask_for_deliver_option
 * pickup_option
   - action_confirm_order
-  - utter_ask_for_valid_data
 * deny
   - utter_ask_for_reorder
   
@@ -82,7 +81,6 @@
   - utter_ask_for_deliver_option
 * pickup_option
   - action_confirm_order
-  - utter_ask_for_valid_data
 * affirm
   - utter_goodbye
   
@@ -96,7 +94,6 @@
   - utter_ask_for_deliver_option
 * pickup_option
   - action_confirm_order
-  - utter_ask_for_valid_data
 * deny
   - utter_ask_for_reorder
 
@@ -111,7 +108,6 @@
 * my_address_is
   - action_save_address
   - action_confirm_order_with_address
-  - utter_ask_for_valid_data
 * affirm
   - utter_goodbye
   
@@ -125,7 +121,6 @@
 * my_address_is
   - action_save_address
   - action_confirm_order_with_address
-  - utter_ask_for_valid_data
 * deny
   - utter_ask_for_reorder
   
@@ -142,7 +137,6 @@
 * my_address_is
   - action_save_address
   - action_confirm_order_with_address
-  - utter_ask_for_valid_data
 * affirm
   - utter_goodbye
   
@@ -159,7 +153,6 @@
 * my_address_is
   - action_save_address
   - action_confirm_order_with_address
-  - utter_ask_for_valid_data
 * deny
   - utter_ask_for_reorder
 

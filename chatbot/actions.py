@@ -82,7 +82,7 @@ class ActionConfirmOrder(Action):
             if dish['name'] == order:  
                 preparation_time = dish['preparation_time']
                 break
-        message = f'Your order: {order} will be ready in {preparation_time * 60} minutes\nYour comment: {comment}\nYou choosed self pick-up delivery'
+        message = f'Your order: {order} will be ready in {preparation_time * 60} minutes\nYour comment: {comment}\nYou choosed self pick-up delivery\nIs everything fine with your order?'
    
         dispatcher.utter_message(message)
         return []
@@ -107,7 +107,7 @@ class ActionConfirmOrderWithAddress(Action):
                 preparation_time = dish['preparation_time']
                 break
         address = tracker.get_slot('address')
-        message = f'Your order: {order} will be ready in {preparation_time * 60} minutes\nYour comment: {comment}\nDelivery to: {address}'
+        message = f'Your order: {order} will be ready in {preparation_time * 60} minutes\nYour comment: {comment}\nDelivery to: {address}\nIs everything fine with your order?'
 
         dispatcher.utter_message(message)
         return []
