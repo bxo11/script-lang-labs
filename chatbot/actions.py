@@ -44,6 +44,18 @@ class ActionOpenHours(Action):
         dispatcher.utter_message(message)
         return []
 
+class ActionSaveOrder(Action):
+    def name(self):
+        return 'action_save_order'
+
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        order = next(tracker.get_latest_entity_values("order"), None)
+        
+        return [SlotSet("order", order)]
+    
 class ActionMenuList(Action):
     def name(self):
         return 'action_menu_list'

@@ -54,12 +54,10 @@
 - extremely sad
 - so sad
 
-
 ## intent:list_menu_items
 - what is in menu?
 - show menu
 - menu
-
 
 ## intent:my_address_is
 - my address is
@@ -70,32 +68,34 @@
 - i live on
 - send it on
 
-
 ## intent:pickup_option
 - pick up
 - pickup
-
 
 ## intent:delivery_option
 - delivery
 - deliver
 
-
 ## intent:provide_details
 - i need extra
 - i want extra
-- give me more
 - with additional
 - without
 
-
 ## intent:place_order
-- i want order a [Lasagne](order)
-- i would like a [Lasagne](order)
-- i want to order a [Lasagne](order)
-- give me a [Lasagne](order)
-- i want to buy a [Lasagne](order)
+- i want order a [Lasagne](order).
+- i would like a [Lasagne](order).
+- i want to order a [Lasagne](order).
+- give me a [Lasagne](order).
+- i want to buy a [Lasagne](order).
 
+## lookup:order
+- Lasagne
+- Pizza
+- Hot-dog
+- Burger
+- Spaghetti Carbonara
+- Tiramisu
 
 ## intent:restaurant_work_hours
 - are you working on [Monday](day)?
@@ -107,15 +107,6 @@
 - do you work on [Monday](day)?
 - is the restaurant work on [Monday](day)?
 - is the restaurant open on [Monday](day)?
-
-
-## lookup:order
-- Lasagne
-- Pizza
-- Hot-dog
-- Burger
-- Spaghetti Carbonara
-- Tiramisu
 
 
 ## lookup:day

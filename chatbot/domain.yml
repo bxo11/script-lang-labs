@@ -3,14 +3,14 @@ actions:
 - action_confirm_order_with_address
 - action_menu_list
 - action_open_hours
-- action_set_order_item
-- action_save_details
 - action_save_address
-- utter_ask_for_deliver_option
+- action_save_details
+- action_set_order_item
+- action_save_order
 - utter_ask_for_address
 - utter_ask_for_comment
+- utter_ask_for_deliver_option
 - utter_ask_for_details
-- utter_ask_for_valid_data
 - utter_ask_for_reorder
 - utter_cheer_up
 - utter_did_that_help
@@ -18,12 +18,11 @@ actions:
 - utter_greet
 - utter_happy
 - utter_iamabot
-
 entities:
 - day
 - order
-
 intents:
+- place_order
 - greet
 - goodbye
 - affirm
@@ -36,30 +35,16 @@ intents:
 - delivery_option
 - provide_details
 - my_address_is
-- place_order
 - pickup_option
-
-slots:
-  day:
-    type: text
-  order:
-    type: text
-  address:
-    type: text 
-  comment:
-    type: text 
-
 responses:
-  utter_ask_for_deliver_option:
-  - text: Do you want delivery to your address or pick up option?
   utter_ask_for_address:
   - text: Provide your full address
   utter_ask_for_comment:
   - text: Do you want to add some comment to order?
+  utter_ask_for_deliver_option:
+  - text: Do you want delivery to your address or pick up option?
   utter_ask_for_details:
   - text: Please, provide more details
-  utter_ask_for_valid_data:
-  - text: Is everything fine with your order?
   utter_ask_for_reorder:
   - text: Please make a reorder
   utter_cheer_up:
@@ -75,7 +60,15 @@ responses:
   - text: Great, carry on!
   utter_iamabot:
   - text: I am a bot, powered by Rasa.
-
 session_config:
-  session_expiration_time: 60
   carry_over_slots_to_new_session: false
+  session_expiration_time: 60
+slots:
+  address:
+    type: text
+  comment:
+    type: text
+  day:
+    type: text
+  order:
+    type: text

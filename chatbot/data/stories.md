@@ -52,17 +52,18 @@
 
 ## pickup no-comment 
 * place_order
+  - action_save_order
   - utter_ask_for_comment
 * deny
   - utter_ask_for_deliver_option
 * pickup_option
   - action_confirm_order
-  - utter_ask_for_valid_data
 * affirm
   - utter_goodbye
   
 ## pickup no-comment reorder
 * place_order
+  - action_save_order
   - utter_ask_for_comment
 * deny
   - utter_ask_for_deliver_option
@@ -73,6 +74,7 @@
   
 ## pickup comment 
 * place_order
+  - action_save_order
   - utter_ask_for_comment
 * affirm
   - utter_ask_for_details
@@ -86,6 +88,7 @@
   
 ## pickup comment reorder
 * place_order
+  - action_save_order
   - utter_ask_for_comment
 * affirm
   - utter_ask_for_details
@@ -100,6 +103,7 @@
 
 ## delivery no-comment 
 * place_order
+  - action_save_order
   - utter_ask_for_comment
 * deny
   - utter_ask_for_deliver_option
@@ -113,6 +117,7 @@
   
 ## delivery no-comment reorder
 * place_order
+  - action_save_order
   - utter_ask_for_comment
 * deny
   - utter_ask_for_deliver_option
@@ -126,6 +131,7 @@
   
 ## delivery comment 
 * place_order
+  - action_save_order
   - utter_ask_for_comment
 * affirm
   - utter_ask_for_details
@@ -142,6 +148,7 @@
   
 ## delivery comment reorder
 * place_order
+  - action_save_order
   - utter_ask_for_comment
 * affirm
   - utter_ask_for_details
@@ -155,5 +162,4 @@
   - action_confirm_order_with_address
 * deny
   - utter_ask_for_reorder
-
 
