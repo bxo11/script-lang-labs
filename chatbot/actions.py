@@ -26,6 +26,7 @@ class ActionOpenHours(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         day = next(tracker.get_latest_entity_values("day"), None)
+        day = day.capitalize()
         f = open('opening_hours.json')
         data = json.load(f)
         f.close()
@@ -87,6 +88,7 @@ class ActionConfirmOrder(Action):
         data = json.load(f)
         f.close()
         order = tracker.get_slot("order")
+        order = order.capitalize()
         comment = tracker.get_slot("comment")
         preparation_time = 0
 
@@ -111,6 +113,7 @@ class ActionConfirmOrderWithAddress(Action):
         data = json.load(f)
         f.close()
         order = tracker.get_slot("order")
+        order = order.capitalize()
         comment = tracker.get_slot("comment")
         preparation_time = 0
        

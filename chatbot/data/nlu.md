@@ -81,21 +81,32 @@
 - i want extra
 - with additional
 - without
+- without the tomatoes
 
 ## intent:place_order
 - i want order a [Lasagne](order).
 - i would like a [Lasagne](order).
-- i want to order a [Lasagne](order).
-- give me a [Lasagne](order).
 - i want to buy a [Lasagne](order).
 
-## lookup:order
-- Lasagne
-- Pizza
-- Hot-dog
-- Burger
-- Spaghetti Carbonara
-- Tiramisu
+- i want order a [Pizza](order).
+- i would like a [Pizza](order).
+- i want to buy a [Pizza](order).
+
+- i want order a [Burger](order).
+- i would like a [Burger](order).
+- i want to buy a [Burger](order).
+
+- i want order a [Spaghetti Carbonara](order).
+- i would like a [Spaghetti Carbonara](order).
+- i want to buy a [Spaghetti Carbonara](order).
+
+- i want order a [Tiramisu](order).
+- i would like a [Tiramisu](order).
+- i want to buy a [Tiramisu](order).
+
+- i want order a [Hot-dog](order).
+- i would like a [Hot-dog](order).
+- i want to buy a [Hot-dog](order).
 
 ## intent:restaurant_work_hours
 - are you working on [Monday](day)?
