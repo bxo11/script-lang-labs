@@ -13,7 +13,6 @@ CREATE TABLE shop_product (
 );
 
 
-
 INSERT INTO shop_category (name)
 VALUES ('Clothing'), ('Electronics'), ('Home Goods');
 
