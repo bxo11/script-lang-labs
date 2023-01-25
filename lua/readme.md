@@ -1,15 +1,20 @@
+# Setup
 Installing the Dependencies
 
-    - sudo apt-get install luarocks nginx
+    - luarocks, lua, nginx
     - Install OpenResty (http://openresty.org/en/linux-packages.html)
     - sudo luarocks install lapis
 
 
 https://leafo.net/lapis/reference/lua_getting_started.html
+
 https://leafo.net/lapis/reference/moon_getting_started.html
 
-install postgres and create role lua with password secret123
+install postgres, and create role `lua` with password `secret123`
 
+run `postgres-models.sql` in postgres database to load schemas and init data
+
+# Endpoints
 category:
 - post endpoint: http://localhost:8080/categories
     Body (form-data):
